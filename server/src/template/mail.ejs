@@ -1,0 +1,56 @@
+<style>
+    .container {
+        max-width: 600px;
+        min-width: 300px;
+        margin: 40px auto;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        padding: 20px;
+        background-image: linear-gradient(to right, #9960ce 0%, #b525c5 100%);
+        border-radius: 5px;
+        color: #fff;
+    }
+
+    .title {
+        margin-bottom: 40px;
+    }
+
+    .begin {
+        padding-left: 20px;
+    }
+
+    .content {
+        color: #dde2e2;
+        padding-left: 10px;
+    }
+
+    .code {
+        color: #3acbff;
+        font-size: 24px;
+    }
+
+    .sign {
+        margin-top: 40px;
+        text-align: right;
+    }
+
+    .date {
+        text-align: right;
+    }
+</style>
+<div class="container">
+    <h3 class="title">嗨! 亲爱的用户：</h3>
+    <p class="begin">您正在进行邮箱验证,本次请求的验证码为：</p>
+    <p class="content">
+        <strong class="code">
+            <%= locals.code %>
+        </strong>
+        <span>（为了保障您帐号的安全性,请在 <strong>5</strong>  分钟内完成验证,祝您生活愉快!）</span>
+    </p>
+    <p class="sign">
+        <%= locals.sign %>
+    </p>
+    <p class="date">
+        <%= locals.date %>
+    </p>
+</div>
